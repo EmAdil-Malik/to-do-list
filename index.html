@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List App</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">📝 To-Do</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </li>
+      </ul>
+    </nav>
 
-  <nav class="navbar">
-    <div class="logo">📝 To-Do</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#tasks">Tasks</a></li>
-      <li><a href="#about">About</a></li>
-   </ul>
-  </nav>
-
-  <div class="container" id="home">
-    <div class="todo-app" id="tasks">
-      <h2>Task Manager</h2>
-      <div class="input-group">
-        <input type="text" id="taskInput" placeholder="Add new task..." />
-        <button onclick="addTask()">Add</button>
-      </div>
-      <ul id="taskList"></ul>
-      <div class="actions">
-        <button onclick="clearAll()">Clear All</button>
+    <div class="container" id="home">
+      <div class="todo-app" id="tasks">
+        <h2>Task Manager</h2>
+        <div class="input-group">
+          <input type="text" id="taskInput" placeholder="Add new task..." />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+        <div class="actions">
+          <button onclick="clearAll()">Clear All</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer id="about">
-    <p>This is a simple To-Do List app built with HTML, CSS, and JavaScript. It lets users add, edit, mark as complete, and delete tasks easily.</p>
-  </footer>
+    <footer id="about">
+      <p>
+        This is a simple To-Do List app built with HTML, CSS, and JavaScript. It
+        lets users add, edit, mark as complete, and delete tasks easily.
+      </p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
