@@ -1,5 +1,5 @@
-git initlet taskList = document.getElementById("taskList");
-let taskInput = document.getElementById("taskInput");
+// git initlet taskList = document.getElementById("taskList");
+// let taskInput = document.getElementById("taskInput");
 
 document.addEventListener("DOMContentLoaded", () => {
   loadTasks();
@@ -82,3 +82,18 @@ function updateStorage() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+
+  const btn = document.querySelector(".theme-toggle");
+  btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+}
+
+function applySavedTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.body.classList.add("dark");
+    document.querySelector(".theme-toggle").textContent = "☀️";
+  }
+}
