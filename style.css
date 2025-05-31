@@ -9,17 +9,6 @@
   --nav-bg: #dfe6e9;
 }
 
-body.dark {
-  --bg-color: #1e1e1e;
-  --card-bg: #2d2d2d;
-  --text-color: #ffffff;
-  --accent: #81ecec;
-  --button-bg: #55efc4;
-  --button-text: #000;
-  --completed-color: #b2bec3;
-  --nav-bg: #333;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,6 +52,7 @@ body {
   color: var(--text-color);
   font-weight: 500;
 }
+
 .container {
   max-width: 600px;
   margin: 2rem auto;
@@ -114,10 +104,6 @@ li {
   transition: 0.3s;
 }
 
-body.dark li {
-  background: #444;
-}
-
 li.completed span {
   text-decoration: line-through;
   color: var(--completed-color);
@@ -145,6 +131,7 @@ li button {
   border-radius: 6px;
   cursor: pointer;
 }
+
 /* Hover Effects */
 .input-group button:hover,
 .actions button:hover {
@@ -173,10 +160,10 @@ li button:hover {
   transform: scale(1.1);
   transition: 0.2s ease;
 }
+
 li, li button, .theme-toggle, .input-group button, .actions button {
   transition: all 0.2s ease-in-out;
 }
-
 
 footer {
   background: var(--nav-bg);
